@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
         initListeners();
         updateList();
-        loadSampleItems();
+//        loadSampleItems();
     }
 
     @Override
