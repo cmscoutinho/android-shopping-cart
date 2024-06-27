@@ -11,8 +11,9 @@
     <EditText
         android:id="@+id/activity_edit_field_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
+        android:autofillHints="Arroz"
         android:inputType="textCapWords"
         android:hint="@string/name"
         />
@@ -20,18 +21,20 @@
     <EditText
         android:id="@+id/activity_edit_field_price"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
         android:inputType="numberDecimal"
+        android:autofillHints="10.0"
         android:hint="@string/price"
         />
 
     <EditText
         android:id="@+id/activity_edit_field_quantity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
         android:inputType="number"
+        android:autofillHints="1"
         android:hint="@string/quantity"
         />
 

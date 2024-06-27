@@ -7,6 +7,8 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 import br.edu.unifesspa.listacompras.R;
 import br.edu.unifesspa.listacompras.controller.ProductDAO;
 import br.edu.unifesspa.listacompras.model.Product;
