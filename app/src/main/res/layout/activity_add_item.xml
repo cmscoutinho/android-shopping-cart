@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Nome"
         android:inputType="textCapWords"
+        android:hint="@string/name"
         />
 
     <EditText
@@ -22,8 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Preço"
         android:inputType="numberDecimal"
+        android:hint="@string/price"
         />
 
     <EditText
@@ -31,8 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Quantidade"
         android:inputType="number"
+        android:hint="@string/quantity"
         />
 
     <Button
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
-        android:text="Limpar"
+        android:text="@string/clear"
         />
 
     <Button
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
-        android:text="Salvar"
+        android:text="@string/save"
         />
 
 </LinearLayout>
