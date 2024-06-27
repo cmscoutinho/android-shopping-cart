@@ -39,13 +39,18 @@
         android:id="@+id/activity_edit_button_clear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
         android:text="Limpar"
-        android:layout_margin="10dp"/>
+        />
 
     <Button
         android:id="@+id/activity_edit_button_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
         android:text="Salvar"
-        android:layout_margin="10dp"/>
+        />
+
 </LinearLayout>
