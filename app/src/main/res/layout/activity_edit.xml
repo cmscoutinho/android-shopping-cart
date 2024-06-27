@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.EditActivity">
+
+    <EditText
+        android:id="@+id/activity_edit_field_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Nome"
+        android:inputType="textCapWords"
+        />
+
+    <EditText
+        android:id="@+id/activity_edit_field_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Preço"
+        android:inputType="numberDecimal"
+        />
+
+    <EditText
+        android:id="@+id/activity_edit_field_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Quantidade"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/activity_edit_button_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/activity_edit_button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:layout_margin="10dp"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/ids.xml -->
+<resources>
+    <item name="fab_add_item" type="id"/>
+    <item name="fab_clear" type="id"/>
+    <item name="fab_sort" type="id"/>
+</resources>

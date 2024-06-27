@@ -1,0 +1,27 @@
+public List<Produto> carregaLista(Context context) {
+        Gson gson = new Gson();
+        try (FileReader fileReader = new FileReader(context.getFilesDir() + "/product.json")) {
+            Produto[] productArr = gson.fromJson(fileReader, Produto[].class);
+            if (productArr.length != 0) {
+                listaProdutos = Arrays.asList(productArr);
+                return new ArrayList<>(listaProdutos);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new ArrayList<>();
+    }
+
+
+
+
+    public void salvaLista(Context context) {
+        Gson gson = new Gson();
+        String json = gson.toJson(listaProdutos);
+
+        try (FileWriter fileWriter = new FileWriter( context.getFilesDir() + "/product.json")) {
+            fileWriter.write(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
