@@ -19,7 +19,8 @@
     <ListView
         android:id="@+id/activity_main_list_produtos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
 
     <TextView
         android:id="@+id/activity_main_texto_total"
