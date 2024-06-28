@@ -43,8 +43,20 @@ public class ProductDAO {
         saveList();
     }
 
-    public void sortList() {
-        productList.sort(Comparator.comparing(Product::getName));
+    public void sortList(int which) {
+        switch (which) {
+            case 0:
+                productList.sort(Comparator.comparing(Product::getName));
+                break;
+            case 1:
+                productList.sort(Comparator.comparing(Product::getPrice));
+                break;
+            case 2:
+                productList.sort(Comparator.comparing(Product::getQuantity));
+                break;
+            default:
+                break;
+        }
         saveList();
     }
 

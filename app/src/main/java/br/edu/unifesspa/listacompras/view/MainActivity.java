@@ -1,5 +1,6 @@
 package br.edu.unifesspa.listacompras.view;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -88,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 startAddActivity();
                 return false;
             } else if (id == R.id.fab_sort) {
-                productDAO.sortList();
+                dialogListSort();
+                //                productDAO.sortList();
                 updateList();
                 return false;
             } else if (id == R.id.fab_clear) {
@@ -144,6 +146,22 @@ public class MainActivity extends AppCompatActivity {
         double total = productDAO.getTotal();
         textTotal.setText(
                 String.format(new Locale("pt", "br"), "R$ %.2f", total));
+    }
+
+    private void dialogListSort() {
+        String[] items = {getString(R.string.name), getString(R.string.price), getString(R.string.quantity)};
+        boolean[] itemsValues = {false, false, false};
+        new AlertDialog.Builder(this)
+                .setTitle("Ordenar lista")
+                .setMessage("Como gostaria de ordenar a lista")
+                .setMultiChoiceItems(items, itemsValues, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        productDAO.sortList(which);
+                    }
+                })
+                .create()
+                .show();
     }
 
     private void loadSampleItems() {
