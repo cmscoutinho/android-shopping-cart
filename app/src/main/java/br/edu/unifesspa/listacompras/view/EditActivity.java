@@ -17,6 +17,7 @@ public class EditActivity extends AppCompatActivity {
 
     private Button buttonSave;
     private Button buttonClear;
+    private Button buttonBack;
     private EditText fieldName;
     private EditText fieldPrice;
     private EditText fieldQuantity;
@@ -43,6 +44,8 @@ public class EditActivity extends AppCompatActivity {
 
         buttonSave = findViewById(R.id.activity_edit_button_save);
         buttonClear = findViewById(R.id.activity_edit_button_clear);
+        buttonBack = findViewById(R.id.activity_edit_button_back);
+
     }
 
     @NonNull
@@ -75,6 +78,8 @@ public class EditActivity extends AppCompatActivity {
             productDAO.saveList();
             finish();
         });
+
+        buttonBack.setOnClickListener(v -> finish());
     }
 }
 

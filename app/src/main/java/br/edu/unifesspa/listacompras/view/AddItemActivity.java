@@ -15,6 +15,7 @@ public class AddItemActivity extends AppCompatActivity {
 
     Button buttonSave;
     Button buttonClear;
+    Button buttonBack;
     EditText fieldName;
     EditText fieldPrice;
     EditText fieldQuantity;
@@ -39,6 +40,7 @@ public class AddItemActivity extends AppCompatActivity {
 
         buttonSave = findViewById(R.id.activity_add_item_button_save);
         buttonClear = findViewById(R.id.activity_add_item_button_clear);
+        buttonBack = findViewById(R.id.activity_add_item_button_back);
     }
 
     private void initListeners() {
@@ -59,6 +61,8 @@ public class AddItemActivity extends AppCompatActivity {
             Toast.makeText(this, nome, Toast.LENGTH_SHORT).show();
             finish();
         });
+
+        buttonBack.setOnClickListener(v -> finish());
     }
 }
 

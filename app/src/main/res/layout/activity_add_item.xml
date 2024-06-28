@@ -53,4 +53,13 @@
         android:text="@string/save"
         />
 
+    <Button
+        android:id="@+id/activity_add_item_button_back"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="@string/back"
+        />
+
 </LinearLayout>

@@ -5,4 +5,5 @@
     <string name="quantity">Quantidade</string>
     <string name="clear">Limpar</string>
     <string name="save">Salvar</string>
+    <string name="back">Voltar</string>
 </resources>
