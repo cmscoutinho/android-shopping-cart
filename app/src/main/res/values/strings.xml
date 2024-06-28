@@ -6,4 +6,6 @@
     <string name="clear">Limpar</string>
     <string name="save">Salvar</string>
     <string name="back">Voltar</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancelar</string>
 </resources>
