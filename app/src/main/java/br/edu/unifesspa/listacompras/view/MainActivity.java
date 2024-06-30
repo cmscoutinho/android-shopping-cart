@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             } else if (id == R.id.fab_sort) {
                 dialogListSort();
-                updateList();
                 return false;
             } else if (id == R.id.fab_clear) {
                 productDAO.clearList();
@@ -106,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("position", position);
             startActivity(intent);
         });
-
         productListView.setOnItemLongClickListener((parent, view, position, id) -> {
             new AlertDialog.Builder(this)
                     .setTitle("Remoção de item")
@@ -148,7 +146,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void dialogListSort() {
-        productDAO.sortList(0); // to be removed after implementing the MultiChoice
+
+        String[] items = {getString(R.string.name), getString(R.string.price), getString(R.string.quantity)};
+        final int[] checkedItem = {-1};
+
+        new AlertDialog.Builder(MainActivity.this)
+                .setTitle("Ordenar por:")
+                .setSingleChoiceItems(items, checkedItem[0], (dialog, which) -> {
+                    productDAO.sortList(which);
+                    updateList();
+                    dialog.dismiss();
+                })
+                .setNeutralButton("Cancela", (dialog, which) -> {
+
+                })
+                .create()
+                .show();
     }
 
     private void loadSampleItems() {
