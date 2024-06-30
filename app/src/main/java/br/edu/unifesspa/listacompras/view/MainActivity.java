@@ -149,6 +149,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void dialogListSort() {
         productDAO.sortList(0); // to be removed after implementing the MultiChoice
+
+        String[] items = {"Teste",getString(R.string.name), getString(R.string.price), getString(R.string.quantity)};
+        boolean[] itemsValues = {false, false, false, false};
+        new AlertDialog.Builder(this)
+                .setTitle("Ordenar lista")
+                .setMessage("Como gostaria de ordenar a lista")
+                .setMultiChoiceItems(items, itemsValues, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+
+                    }
+                })
+                .setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Handle Cancel button press
+                    }
+                })
+                .create()
+                .show();
     }
 
     private void loadSampleItems() {
