@@ -13,12 +13,12 @@ import br.edu.unifesspa.listacompras.model.Product;
 
 public class AddItemActivity extends AppCompatActivity {
 
-    Button buttonSave;
-    Button buttonClear;
-    Button buttonBack;
-    EditText fieldName;
-    EditText fieldPrice;
-    EditText fieldQuantity;
+    private Button buttonSave;
+    private Button buttonClear;
+    private Button buttonBack;
+    private EditText fieldName;
+    private EditText fieldPrice;
+    private EditText fieldQuantity;
 
     ProductDAO productDAO;
 
